@@ -1,7 +1,16 @@
 # front-detail-E2-pack
-hey idiot read this 
+So you decided to look at this
+
+so far we only have front plows for EMD locomotives
+
+ALCo detail units coming soon
+
+we have Strike plate, foot board, large/regular plow, and ditchlight and ditchlightless versons of the E2
 
 First put the folder above into your adv dupe 2 folder
 
-Look at the deomnstrator for how to use 
-will be released with a video later
+Then load gmod and place down the dupe
+(the E2's are in the dupe)
+
+if you feel like it you can make a folder with the plows in it
+
