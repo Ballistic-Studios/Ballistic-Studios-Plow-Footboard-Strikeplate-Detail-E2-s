@@ -1,0 +1,231 @@
+@name Ballistic's Plow Detail E2 (ALCo RS Series)(Foot Board)(BETA V0.1) 
+#[Because people are lazy
+also thanks for trying out this
+
+
+
+
+
+NEW YORK CENTRAL
+]#
+
+@inputs 
+@outputs 
+@persist 
+@trigger 
+Color = vec(255,255,255)
+Color2 = vec(255)
+CouplerMaterial = "models/proppertextures/enamel_black"
+Material = "models/proppertextures/enamel_black"
+Material2 = "models/proppertextures/acrylic"
+#models/proppertextures/enamel_black
+#models/proppertextures/acrylic
+
+
+ 
+
+if(first() | duped()){
+
+Mat = Material
+Mat2 = Material2
+CupMat = CouplerMaterial
+A = 0
+holoCreate(A)
+holoParent(A, entity())
+holoAng(A, entity():toWorld(ang(0,90,-90)) )
+holoModel(A, "models/flak/part/pilot/footboards_alco_rs.mdl")
+holoEntity(A):setSubMaterial(1,Mat)
+holoPos(A,entity():toWorld(vec(46,0,9)))
+holoScale(A, vec(1,1.2,1))
+holoColor(A,Color)
+A++
+holoCreate(A)
+holoParent(A, entity())
+holoAng(A, entity():toWorld(ang(-90,0,0)) )
+holoModel(A, "models/gsgtrainprops/parts/couplers/type_e_coupler.mdl")
+holoMaterial(A,CupMat)
+holoPos(A,entity():toWorld(vec(30,0,14)))
+holoScale(A, vec(1))
+holoColor(A,vec(255) )
+A++
+holoCreate(A)
+holoParent(A, entity())
+holoAng(A, entity():toWorld(ang(0,-130,90)) )
+holoModel(A, "models/ext/parts/airhose.mdl")
+holoMaterial(A,"")
+holoPos(A,entity():toWorld(vec(24,20,7)))
+holoScale(A, vec(1))
+holoColor(A,vec(85) )
+holoBodygroup(A,1,4)
+holoEntity(A):setSubMaterial(0,"models/proppertextures/acrylic")
+holoEntity(A):setSubMaterial(2,"models/proppertextures/enamel_black")
+#
+A++
+holoCreate(A)
+holoParent(A, entity())
+holoAng(A, entity():toWorld(ang(-100,0,0)) )
+holoModel(A, "models/hose pipe 3.mdl")
+holoMaterial(A,"")
+holoPos(A,entity():toWorld(vec(30,25,0)))
+holoScale(A, vec(1))
+holoColor(A,vec(100) )
+holoEntity(A):setSubMaterial(2,"models/proppertextures/rubber")
+holoEntity(A):setSubMaterial(3,"models/proppertextures/enamel_black")
+
+A++
+holoCreate(A)
+holoParent(A, entity())
+holoAng(A, entity():toWorld(ang(-100,0,0)) )
+holoModel(A, "models/hose pipe 3.mdl")
+holoMaterial(A,"")
+holoPos(A,entity():toWorld(vec(30,30,0)))
+holoScale(A, vec(1))
+holoColor(A,vec(100) )
+holoEntity(A):setSubMaterial(2,"models/proppertextures/rubber")
+holoEntity(A):setSubMaterial(3,"models/proppertextures/enamel_black")
+
+A++
+holoCreate(A)
+holoParent(A, entity())
+holoAng(A, entity():toWorld(ang(-100,0,0)) )
+holoModel(A, "models/hose pipe 3.mdl")
+holoMaterial(A,"")
+holoPos(A,entity():toWorld(vec(30,35,0)))
+holoScale(A, vec(1))
+holoColor(A,vec(100) )
+holoEntity(A):setSubMaterial(2,"models/proppertextures/rubber")
+holoEntity(A):setSubMaterial(3,"models/proppertextures/enamel_black")
+
+A++
+holoCreate(A)
+holoParent(A, entity())
+holoAng(A, entity():toWorld(ang(0,-90,90)) )
+holoModel(A, "models/ext/parts/airhose_mount.mdl")
+holoMaterial(A,"")
+holoPos(A,entity():toWorld(vec(14,30.3,0)))
+holoScale(A, vec(1))
+holoColor(A,vec(100) )
+holoEntity(A):setSubMaterial(2,"models/proppertextures/enamel_black")
+
+A++
+holoCreate(A)
+holoParent(A, entity())
+holoAng(A, entity():toWorld(ang(-100,0,0)) )
+holoModel(A, "models/hose pipe 3.mdl")
+holoMaterial(A,"")
+holoPos(A,entity():toWorld(vec(30,-25,0)))
+holoScale(A, vec(1))
+holoColor(A,vec(100) )
+holoEntity(A):setSubMaterial(2,"models/proppertextures/rubber")
+holoEntity(A):setSubMaterial(3,"models/proppertextures/enamel_black")
+
+A++
+holoCreate(A)
+holoParent(A, entity())
+holoAng(A, entity():toWorld(ang(-100,0,0)) )
+holoModel(A, "models/hose pipe 3.mdl")
+holoMaterial(A,"")
+holoPos(A,entity():toWorld(vec(30,-30,0)))
+holoScale(A, vec(1))
+holoColor(A,vec(100) )
+holoEntity(A):setSubMaterial(2,"models/proppertextures/rubber")
+holoEntity(A):setSubMaterial(3,"models/proppertextures/enamel_black")
+
+A++
+holoCreate(A)
+holoParent(A, entity())
+holoAng(A, entity():toWorld(ang(-100,0,0)) )
+holoModel(A, "models/hose pipe 3.mdl")
+holoMaterial(A,"")
+holoPos(A,entity():toWorld(vec(30,-35,0)))
+holoScale(A, vec(1))
+holoColor(A,vec(100) )
+holoEntity(A):setSubMaterial(2,"models/proppertextures/rubber")
+holoEntity(A):setSubMaterial(3,"models/proppertextures/enamel_black")
+
+A++
+holoCreate(A)
+holoParent(A, entity())
+holoAng(A, entity():toWorld(ang(0,-90,90)) )
+holoModel(A, "models/ext/parts/airhose_mount.mdl")
+holoMaterial(A,"")
+holoPos(A,entity():toWorld(vec(14,-30.3,0)))
+holoScale(A, vec(1))
+holoColor(A,vec(100) )
+holoEntity(A):setSubMaterial(2,"models/proppertextures/enamel_black")
+
+A++
+holoCreate(A)
+holoPos(A,entity():toWorld(vec(10,24,3)))
+holoParent(A, entity())
+holoModel(A, "models/sprops/cylinders/size_1/cylinder_1_5x30.mdl")
+holoAng(A, entity():toWorld(ang(-84,90,0)) )
+holoScale(A, vec(1,1,1.1))
+holoMaterial(A, (""))
+holoColor(A,Color)
+holoParent(2,1)
+holoEntity(A):setSubMaterial(1,Mat) 
+
+A++ 
+holoCreate(A)
+holoPos(A,entity():toWorld(vec(10,-24,3)))
+holoParent(A, entity())
+holoModel(A, "models/sprops/cylinders/size_1/cylinder_1_5x30.mdl")
+holoAng(A, entity():toWorld(ang(84,90,0)) )
+holoScale(A, vec(1,1,1.1))
+holoMaterial(A, (""))
+holoColor(A,Color)
+holoParent(2,1)
+holoEntity(A):setSubMaterial(1,Mat) 
+
+A++ 
+holoCreate(A)
+holoPos(A,entity():toWorld(vec(10,0,4)))
+holoParent(A, entity())
+holoModel(A, "models/props_c17/playground_teetertoter_stan.mdl")
+holoAng(A, entity():toWorld(ang(0,90,0)) )
+holoScale(A, vec(0.6,0.6,0.7))
+holoMaterial(A, (""))
+holoColor(A,Color)
+holoParent(2,1)
+holoEntity(A):setSubMaterial(1,Mat) 
+
+A++ 
+holoCreate(A)
+holoPos(A,entity():toWorld(vec(17.5,-38,1)))
+holoParent(A, entity())
+holoModel(A, "models/props_c17/playground_teetertoter_stan.mdl")
+holoAng(A, entity():toWorld(ang(0,0,90)) )
+holoScale(A, vec(0.5,0.8,0.4))
+holoMaterial(A, (""))
+holoColor(A,Color)
+holoParent(2,1)
+holoEntity(A):setSubMaterial(1,Mat) 
+
+A++ 
+holoCreate(A)
+holoPos(A,entity():toWorld(vec(17.5,38,1)))
+holoParent(A, entity())
+holoModel(A, "models/props_c17/playground_teetertoter_stan.mdl")
+holoAng(A, entity():toWorld(ang(4,0,-90)) )
+holoScale(A, vec(0.5,0.8,0.4))
+holoMaterial(A, (""))
+holoColor(A,Color)
+holoParent(2,1)
+holoEntity(A):setSubMaterial(1,Mat) 
+
+A++ 
+holoCreate(A)
+holoPos(A,entity():toWorld(vec(17,0,16)))
+holoParent(A, entity())
+holoModel(A, "models/props_vehicles/carparts_axel01a.mdl")
+holoAng(A, entity():toWorld(ang(0,90,10)) )
+holoScale(A, vec(0.2))
+holoMaterial(A, (Mat))
+holoColor(A,Color)
+holoParent(2,1)
+
+}
+
+
+printColor(vec(150,200,150),"{Ballistic's Plow Detail E2} Note, this is a Beta version there will be bugs! If there are any please report them to Ballistic Studios")
