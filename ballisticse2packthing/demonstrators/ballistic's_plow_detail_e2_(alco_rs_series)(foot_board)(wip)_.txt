@@ -44,7 +44,7 @@ holoParent(A, entity())
 holoAng(A, entity():toWorld(ang(-90,0,0)) )
 holoModel(A, "models/gsgtrainprops/parts/couplers/type_e_coupler.mdl")
 holoMaterial(A,CupMat)
-holoPos(A,entity():toWorld(vec(30,0,14)))
+holoPos(A,entity():toWorld(vec(27,0,14)))
 holoScale(A, vec(1))
 holoColor(A,vec(255) )
 A++
