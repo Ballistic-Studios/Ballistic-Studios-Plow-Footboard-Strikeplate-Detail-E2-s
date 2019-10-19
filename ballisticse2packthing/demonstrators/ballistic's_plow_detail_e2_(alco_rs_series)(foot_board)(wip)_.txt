@@ -1,4 +1,4 @@
-@name Ballistic's Plow Detail E2 (ALCo RS Series)(Foot Board)(BETA V0.1) 
+@name Ballistic's Plow Detail E2 (ALCo RS Series)(Foot Board)(BETA V0.2) 
 #[Because people are lazy
 also thanks for trying out this
 
@@ -13,11 +13,11 @@ NEW YORK CENTRAL
 @outputs 
 @persist 
 @trigger 
-Color = vec(255,255,255)
+Color = vec(200,100,0)
 Color2 = vec(255)
 CouplerMaterial = "models/proppertextures/enamel_black"
 Material = "models/proppertextures/enamel_black"
-Material2 = "models/proppertextures/acrylic"
+Material2 = "models/proppertextures/enamel_black"
 #models/proppertextures/enamel_black
 #models/proppertextures/acrylic
 
@@ -156,7 +156,7 @@ holoEntity(A):setSubMaterial(2,"models/proppertextures/enamel_black")
 
 A++
 holoCreate(A)
-holoPos(A,entity():toWorld(vec(10,24,3)))
+holoPos(A,entity():toWorld(vec(7,24,3)))
 holoParent(A, entity())
 holoModel(A, "models/sprops/cylinders/size_1/cylinder_1_5x30.mdl")
 holoAng(A, entity():toWorld(ang(-84,90,0)) )
@@ -168,7 +168,7 @@ holoEntity(A):setSubMaterial(1,Mat)
 
 A++ 
 holoCreate(A)
-holoPos(A,entity():toWorld(vec(10,-24,3)))
+holoPos(A,entity():toWorld(vec(7,-25,3)))
 holoParent(A, entity())
 holoModel(A, "models/sprops/cylinders/size_1/cylinder_1_5x30.mdl")
 holoAng(A, entity():toWorld(ang(84,90,0)) )
@@ -180,7 +180,7 @@ holoEntity(A):setSubMaterial(1,Mat)
 
 A++ 
 holoCreate(A)
-holoPos(A,entity():toWorld(vec(10,0,4)))
+holoPos(A,entity():toWorld(vec(7,0,4)))
 holoParent(A, entity())
 holoModel(A, "models/props_c17/playground_teetertoter_stan.mdl")
 holoAng(A, entity():toWorld(ang(0,90,0)) )
@@ -192,7 +192,7 @@ holoEntity(A):setSubMaterial(1,Mat)
 
 A++ 
 holoCreate(A)
-holoPos(A,entity():toWorld(vec(17.5,-38,1)))
+holoPos(A,entity():toWorld(vec(14.5,-38,1)))
 holoParent(A, entity())
 holoModel(A, "models/props_c17/playground_teetertoter_stan.mdl")
 holoAng(A, entity():toWorld(ang(0,0,90)) )
@@ -204,7 +204,7 @@ holoEntity(A):setSubMaterial(1,Mat)
 
 A++ 
 holoCreate(A)
-holoPos(A,entity():toWorld(vec(17.5,38,1)))
+holoPos(A,entity():toWorld(vec(14.5,38,1)))
 holoParent(A, entity())
 holoModel(A, "models/props_c17/playground_teetertoter_stan.mdl")
 holoAng(A, entity():toWorld(ang(4,0,-90)) )
@@ -216,7 +216,7 @@ holoEntity(A):setSubMaterial(1,Mat)
 
 A++ 
 holoCreate(A)
-holoPos(A,entity():toWorld(vec(17,0,16)))
+holoPos(A,entity():toWorld(vec(13,0,16)))
 holoParent(A, entity())
 holoModel(A, "models/props_vehicles/carparts_axel01a.mdl")
 holoAng(A, entity():toWorld(ang(0,90,10)) )
@@ -228,4 +228,4 @@ holoParent(2,1)
 }
 
 
-printColor(vec(150,200,150),"{Ballistic's Plow Detail E2} Note, this is a Beta version there will be bugs! If there are any please report them to Ballistic Studios")
+printColor(vec(150,200,150),"{Ballistic's Plow Detail E2} Note, this is a Beta version there will be bugs! If there are any please report them to Ballistic Studios here- https://github.com/BallisticStusios/Ballistic-Studios-Plow-Footboard-Strikeplate-Detail-E2-s/issues")
