@@ -1,4 +1,4 @@
-@name Ballistic's Plow Detail E2 (ALCo RS Series)(Foot Board)(BETA V0.2) 
+@name Ballistic's Plow Detail E2 (ALCo RS Series)(Foot Board)(BETA V0.3)
 #[Because people are lazy
 also thanks for trying out this
 
@@ -6,8 +6,7 @@ also thanks for trying out this
 
 
 
-NEW YORK CENTRAL
-]#
+
 
 @inputs 
 @outputs 
@@ -21,10 +20,13 @@ Material2 = "models/proppertextures/enamel_black"
 #models/proppertextures/enamel_black
 #models/proppertextures/acrylic
 
-
+B = 0
  
 
 if(first() | duped()){
+
+if(B == 1) {C = 255}
+else {C==0}
 
 Mat = Material
 Mat2 = Material2
@@ -47,6 +49,7 @@ holoMaterial(A,CupMat)
 holoPos(A,entity():toWorld(vec(27,0,14)))
 holoScale(A, vec(1))
 holoColor(A,vec(255) )
+holoAlpha(A,C)
 A++
 holoCreate(A)
 holoParent(A, entity())
