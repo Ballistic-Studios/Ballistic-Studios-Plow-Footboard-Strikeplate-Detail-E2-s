@@ -1,0 +1,444 @@
+@name good_train_stuff/Ballistic's Loco Plow Detail E2 (EMD)(Standard Plow)(Release V 1.0.4) 
+#Because people are lazy
+@inputs 
+@outputs 
+@persist 
+@trigger 
+#------ Plow Stuffs
+Color = vec(255) #Color of plow
+Color2 = vec(255) #Color of coupler cut bar grabs
+
+Material = "models/proppertextures/enamel_black" #Material of plow
+Material2 = "models/proppertextures/acrylic" #Material of coupler cut bar 
+
+MuDoors = 1 #0 = Closed, 1 = Open, 2 = None
+StreamlinedDoors = 0 #0 = None, 1 = Closed, 2 = Open
+
+Mu = 0 #0 = Yes I want MU's 1 = Nah fam no MU for you
+Ditchlights = 0 #0 = No Ditchlights, 1 = Ditchlights
+
+PlowType = 1 #0 = Strike Plate, 1 = Foot Board, 2 = Plow
+Coupler = 0 #0 = No Coupler, 1 = Fake Real Coupler
+
+Hose = 3 #The Ammount of hoses ya want
+
+#[
+
+    Made by Ballistic Studios
+    Edited by Calnesk Kerman Becase the Plow was Stupid high
+    Also props to Kenny (RedStone) For making the origonal coupler cut bar and air hose setup
+]#
+
+
+#[ 
+
+DO NOT MESS WITH ANYTHING BEYOND THIS POINT
+
+Unless your Kiwi Master then it's cool
+
+]#
+
+if(first() | duped()){
+if(PlowType <= 1) {MuDoors = 0}
+else{MuDoors = MuDoors}
+if(MuDoors == 0) {B = 2}
+if(MuDoors == 1) {B = 1}
+if(MuDoors == 2) {B = 1}
+if(Mu == 1) {B = 3}
+if(Ditchlights == 1) {D = 255}
+else{D = 0}
+Mat = Material
+Mat2 = Material2
+C = -1
+if(PlowType == 0) {E = 255}
+else{E = 0}
+if(PlowType == 1) {F = 255}
+else{F = 0}
+if(PlowType == 2) {G = 255}
+else{G = 0}
+if(Coupler == 1) {H = 255}
+else{H = 0}
+if(Hose == 3) {I = 3}
+if(Hose == 4) {I = 4}
+if(Hose > 4) {I = 0}
+if(Hose < 3) {I = 0}
+
+
+
+
+A = 0
+holoCreate(A)
+holoParent(A, entity())
+holoAng(A, entity():toWorld(ang(-90,0,0)) )
+holoModel(A, "models/gsgtrainprops/parts/footboards/pilot_emd_mid.mdl")
+holoEntity(A):setSubMaterial(1,Mat)
+holoPos(A,entity():toWorld(vec(50,0,7)))
+holoScale(A, vec(1,1.2,1))
+holoColor(A,Color)
+holoAlpha(A , F)
+A++
+holoCreate(A)
+holoParent(A, entity())
+holoAng(A, entity():toWorld(ang(0,90,0)) )
+holoModel(A, "models/sprops/rectangles/size_2/rect_12x72x3.mdl")
+holoMaterial(A,Mat)
+holoPos(A,entity():toWorld(vec(45,0,-1)))
+holoScale(A, vec(1,1.2,1))
+holoColor(A,Color)
+holoAlpha(A,E)
+A++
+holoCreate(A)
+holoParent(A, entity())
+holoAng(A, entity():toWorld(ang(0,90,90)) )
+holoModel(A, "models/sprops/geometry/qhex_24.mdl")
+holoMaterial(A,Mat)
+holoPos(A,entity():toWorld(vec(45,41.98,-1)))
+holoScale(A, vec(1,1,1.386))
+holoColor(A,Color)
+holoAlpha(A,E)
+A++
+holoCreate(A)
+holoParent(A, entity())
+holoAng(A, entity():toWorld(ang(0,-90,-90)) )
+holoModel(A, "models/sprops/geometry/qhex_24.mdl")
+holoMaterial(A,Mat)
+holoPos(A,entity():toWorld(vec(45,-41.98,-1)))
+holoScale(A, vec(1,1,1.386))
+holoColor(A,Color)
+holoAlpha(A,E)
+A++
+holoCreate(A)
+holoParent(A, entity())
+holoAng(A, entity():toWorld(ang(-90,0,0)) )
+holoModel(A, "models/gsgtrainprops/trains/propper/snowplows/plow_medium_multipurpose.mdl")
+holoMaterial(A,Mat)
+holoPos(A,entity():toWorld(vec(57,0,1)))
+holoScale(A, vec(1.0))
+holoColor(A,Color)
+holoBodygroup(A,1,MuDoors)
+holoBodygroup(A,2,StreamlinedDoors)
+holoAlpha(A , G)
+
+A++
+holoCreate(A)
+holoParent(A, entity())
+holoAng(A, entity():toWorld(ang(-90,0,0)) )
+holoModel(A, "models/gsgtrainprops/parts/couplers/type_e_coupler.mdl")
+holoMaterial(A,"models/proppertextures/enamel_black")
+holoPos(A,entity():toWorld(vec(30,0.1,14)))
+holoScale(A, vec(1))
+holoColor(A,vec(255) )
+holoAlpha(A , H)
+A++
+holoCreate(A)
+holoParent(A, entity())
+holoAng(A, entity():toWorld(ang(-90,0,0)) )
+holoModel(A, "models/lazpack/detail/mu_"+ I +"hose_right.mdl")
+holoPos(A,entity():toWorld(vec(17,-32,2)))
+holoScale(A, vec(1))
+holoColor(A,vec(255) )
+holoBodygroup(A,1,B)
+A++
+holoCreate(A)
+holoParent(A, entity())
+holoAng(A, entity():toWorld(ang(-90,0,0)) )
+holoModel(A, "models/lazpack/detail/mu_"+ I +"hose_left.mdl")
+holoPos(A,entity():toWorld(vec(17,32,2)))
+holoScale(A, vec(1))
+holoColor(A,vec(255) )
+holoBodygroup(A,1,B)
+A++
+holoCreate(A)
+holoParent(A, entity())
+holoAng(A, entity():toWorld(ang(-90,0,0)) )
+holoModel(A, "models/lazpack/detail/brakehose.mdl")
+holoPos(A,entity():toWorld(vec(25,15,2)))
+holoScale(A, vec(1))
+holoColor(A,vec(255) )
+
+A++
+holoCreate(A)
+holoPos(A,entity():toWorld(vec(10+C,28,4)))
+holoParent(A, entity())
+holoModel(A, "models/sprops/cylinders/size_1/cylinder_1_5x36.mdl")
+holoAng(A, entity():toWorld(ang(-88,90,0)) )
+holoScale(A, vec(1,1,1.1))
+holoMaterial(A, (""))
+holoColor(A,Color)
+holoParent(2,1)
+holoEntity(A):setSubMaterial(1,Mat) 
+A++ 
+holoCreate(A)
+holoPos(A,entity():toWorld(vec(10+C,-28,4)))
+holoParent(A, entity())
+holoModel(A, "models/sprops/cylinders/size_1/cylinder_1_5x36.mdl")
+holoAng(A, entity():toWorld(ang(88,90,0)) )
+holoScale(A, vec(1,1,1.1))
+holoMaterial(A, (""))
+holoColor(A,Color)
+holoParent(2,1)
+holoEntity(A):setSubMaterial(1,Mat) 
+A++ 
+holoCreate(A)
+holoPos(A,entity():toWorld(vec(10+C,0,4)))
+holoParent(A, entity())
+holoModel(A, "models/props_c17/playground_teetertoter_stan.mdl")
+holoAng(A, entity():toWorld(ang(0,90,0)) )
+holoScale(A, vec(0.6,0.6,0.7))
+holoMaterial(A, (""))
+holoColor(A,Color)
+holoParent(2,1)
+holoEntity(A):setSubMaterial(1,Mat) 
+A++ 
+holoCreate(A)
+holoPos(A,entity():toWorld(vec(13+C,-47,0)))
+holoParent(A, entity())
+holoModel(A, "models/props_c17/playground_teetertoter_stan.mdl")
+holoAng(A, entity():toWorld(ang(0,0,0)) )
+holoScale(A, vec(0.3,0.5,0.2))
+holoMaterial(A, (""))
+holoColor(A,Color)
+holoParent(2,1)
+holoEntity(A):setSubMaterial(1,Mat) 
+A++ 
+holoCreate(A)
+holoPos(A,entity():toWorld(vec(13+C,47,0)))
+holoParent(A, entity())
+holoModel(A, "models/props_c17/playground_teetertoter_stan.mdl")
+holoAng(A, entity():toWorld(ang(0,0,0)) )
+holoScale(A, vec(0.3,0.5,0.2))
+holoMaterial(A, (""))
+holoColor(A,Color)
+holoParent(2,1)
+holoEntity(A):setSubMaterial(1,Mat) 
+A++ 
+holoCreate(A)
+holoPos(A,entity():toWorld(vec(8,48,4)))
+holoParent(A, entity())
+holoModel(A, "models/sprops/misc/fittings/bend_long_90_1_5.mdl")
+holoAng(A, entity():toWorld(ang(30,0,90)) )
+holoScale(A, vec(0.5))
+holoMaterial(A, (""))
+holoColor(A,Color2)
+holoParent(2,1)
+holoEntity(A):setSubMaterial(1,Mat2)
+A++ 
+holoCreate(A)
+holoPos(A,entity():toWorld(vec(8.5,50.35,3.73)))
+holoParent(A, entity())
+holoModel(A, "models/sprops/cylinders/size_1/cylinder_1_5x6.mdl")
+holoAng(A, entity():toWorld(ang(30,0,90)) )
+holoScale(A, vec(0.5))
+holoMaterial(A, (""))
+holoColor(A,Color2)
+holoParent(2,1)
+holoEntity(A):setSubMaterial(1,Mat2)
+A++ 
+holoCreate(A)
+holoPos(A,entity():toWorld(vec(8,52.8,4)))
+holoParent(A, entity())
+holoModel(A, "models/sprops/misc/fittings/bend_long_90_1_5.mdl")
+holoAng(A, entity():toWorld(ang(30,0,-90)) )
+holoScale(A, vec(0.5))
+holoMaterial(A, (""))
+holoColor(A,Color2)
+holoParent(2,1)
+holoEntity(A):setSubMaterial(1,Mat2)
+A++ 
+holoCreate(A)
+holoPos(A,entity():toWorld(vec(4.9,47.7,5.8)))
+holoParent(A, entity())
+holoModel(A, "models/sprops/cylinders/size_1/cylinder_1_5x12.mdl")
+holoAng(A, entity():toWorld(ang(-60,0,-5)) )
+holoScale(A, vec(0.5))
+holoMaterial(A, (""))
+holoColor(A,Color2)
+holoParent(2,1)
+holoEntity(A):setSubMaterial(1,Mat2)
+A++ 
+holoCreate(A)
+holoPos(A,entity():toWorld(vec(4.9,53.1,5.8)))
+holoParent(A, entity())
+holoModel(A, "models/sprops/cylinders/size_1/cylinder_1_5x12.mdl")
+holoAng(A, entity():toWorld(ang(-60,0,5)) )
+holoScale(A, vec(0.5))
+holoMaterial(A, (""))
+holoColor(A,Color2)
+holoParent(2,1)
+holoEntity(A):setSubMaterial(1,Mat2)
+A++ 
+holoCreate(A)
+holoPos(A,entity():toWorld(vec(2,48.47,7.5)))
+holoParent(A, entity())
+holoModel(A, "models/sprops/misc/fittings/bend_long_90_1_5.mdl")
+holoAng(A, entity():toWorld(ang(0,-90,60)) )
+holoScale(A, vec(0.5))
+holoMaterial(A, (""))
+holoColor(A,Color2)
+holoParent(2,1)
+holoEntity(A):setSubMaterial(1,Mat2)
+A++ 
+holoCreate(A)
+holoPos(A,entity():toWorld(vec(2,52.3,7.5)))
+holoParent(A, entity())
+holoModel(A, "models/sprops/misc/fittings/bend_long_90_1_5.mdl")
+holoAng(A, entity():toWorld(ang(0,90,-60)) )
+holoScale(A, vec(0.5))
+holoMaterial(A, (""))
+holoColor(A,Color2)
+holoParent(2,1)
+holoEntity(A):setSubMaterial(1,Mat2)
+A++ 
+holoCreate(A)
+holoPos(A,entity():toWorld(vec(1.53,50.35,7.76)))
+holoParent(A, entity())
+holoModel(A, "models/sprops/cylinders/size_1/cylinder_1_5x3.mdl")
+holoAng(A, entity():toWorld(ang(30,0,90)) )
+holoScale(A, vec(0.5,0.5,1))
+holoMaterial(A, (""))
+holoColor(A,Color2)
+holoParent(2,1)
+holoEntity(A):setSubMaterial(1,Mat2)
+
+A++ 
+holoCreate(A)
+holoPos(A,entity():toWorld(vec(8,-52.8,4)))
+holoParent(A, entity())
+holoModel(A, "models/sprops/misc/fittings/bend_long_90_1_5.mdl")
+holoAng(A, entity():toWorld(ang(30,0,90)) )
+holoScale(A, vec(0.5))
+holoMaterial(A, (""))
+holoColor(A,Color2)
+holoParent(2,1)
+holoEntity(A):setSubMaterial(1,Mat2)
+A++ 
+holoCreate(A)
+holoPos(A,entity():toWorld(vec(8.5,-50.35,3.73)))
+holoParent(A, entity())
+holoModel(A, "models/sprops/cylinders/size_1/cylinder_1_5x6.mdl")
+holoAng(A, entity():toWorld(ang(30,0,90)) )
+holoScale(A, vec(0.5))
+holoMaterial(A, (""))
+holoColor(A,Color2)
+holoParent(2,1)
+holoEntity(A):setSubMaterial(1,Mat2)
+A++ 
+holoCreate(A)
+holoPos(A,entity():toWorld(vec(8,-48,4)))
+holoParent(A, entity())
+holoModel(A, "models/sprops/misc/fittings/bend_long_90_1_5.mdl")
+holoAng(A, entity():toWorld(ang(30,0,-90)) )
+holoScale(A, vec(0.5))
+holoMaterial(A, (""))
+holoColor(A,Color2)
+holoParent(2,1)
+holoEntity(A):setSubMaterial(1,Mat2)
+A++ 
+holoCreate(A)
+holoPos(A,entity():toWorld(vec(4.9,-53.1,5.8)))
+holoParent(A, entity())
+holoModel(A, "models/sprops/cylinders/size_1/cylinder_1_5x12.mdl")
+holoAng(A, entity():toWorld(ang(-60,0,-5)) )
+holoScale(A, vec(0.5))
+holoMaterial(A, (""))
+holoColor(A,Color2)
+holoParent(2,1)
+holoEntity(A):setSubMaterial(1,Mat2)
+A++ 
+holoCreate(A)
+holoPos(A,entity():toWorld(vec(4.9,-47.7,5.8)))
+holoParent(A, entity())
+holoModel(A, "models/sprops/cylinders/size_1/cylinder_1_5x12.mdl")
+holoAng(A, entity():toWorld(ang(-60,0,5)) )
+holoScale(A, vec(0.5))
+holoMaterial(A, (""))
+holoColor(A,Color2)
+holoParent(2,1)
+holoEntity(A):setSubMaterial(1,Mat2)
+A++ 
+holoCreate(A)
+holoPos(A,entity():toWorld(vec(2,-52.3,7.5)))
+holoParent(A, entity())
+holoModel(A, "models/sprops/misc/fittings/bend_long_90_1_5.mdl")
+holoAng(A, entity():toWorld(ang(0,-90,60)) )
+holoScale(A, vec(0.5))
+holoMaterial(A, (""))
+holoColor(A,Color2)
+holoParent(2,1)
+holoEntity(A):setSubMaterial(1,Mat2)
+A++ 
+holoCreate(A)
+holoPos(A,entity():toWorld(vec(2,-48.5,7.5)))
+holoParent(A, entity())
+holoModel(A, "models/sprops/misc/fittings/bend_long_90_1_5.mdl")
+holoAng(A, entity():toWorld(ang(0,90,-60)) )
+holoScale(A, vec(0.5))
+holoMaterial(A, (""))
+holoColor(A,Color2)
+holoParent(2,1)
+holoEntity(A):setSubMaterial(1,Mat2)
+A++ 
+holoCreate(A)
+holoPos(A,entity():toWorld(vec(1.53,-50.35,7.76)))
+holoParent(A, entity())
+holoModel(A, "models/sprops/cylinders/size_1/cylinder_1_5x3.mdl")
+holoAng(A, entity():toWorld(ang(30,0,90)) )
+holoScale(A, vec(0.5,0.5,1))
+holoMaterial(A, (""))
+holoColor(A,Color2)
+holoParent(2,1)
+holoEntity(A):setSubMaterial(1,Mat2)
+A++ 
+holoCreate(A)
+holoPos(A,entity():toWorld(vec(17+C,0,16)))
+holoParent(A, entity())
+holoModel(A, "models/props_vehicles/carparts_axel01a.mdl")
+holoAng(A, entity():toWorld(ang(0,90,10)) )
+holoScale(A, vec(0.2))
+holoMaterial(A, (Mat))
+holoColor(A,Color)
+holoParent(2,1)
+A++ 
+holoCreate(A)
+holoPos(A,entity():toWorld(vec(-3,-23,0)))
+holoParent(A, entity())
+holoModel(A, "models/ext/parts/ditchlight_mount.mdl")
+holoAng(A, entity():toWorld(ang(0,90,-90)) )
+holoScale(A, vec(1))
+holoMaterial(A, (Mat))
+holoColor(A,Color)
+holoParent(2,1)
+holoAlpha(A,D)
+A++ 
+holoCreate(A)
+holoPos(A,entity():toWorld(vec(-3,23,0)))
+holoParent(A, entity())
+holoModel(A, "models/ext/parts/ditchlight_mount.mdl")
+holoAng(A, entity():toWorld(ang(0,90,-90)) )
+holoScale(A, vec(1))
+holoMaterial(A, (Mat))
+holoColor(A,Color)
+holoParent(2,1)
+holoAlpha(A,D)
+A++ 
+holoCreate(A)
+holoPos(A,entity():toWorld(vec(-10,23,1)))
+holoParent(A, entity())
+holoModel(A, "models/gsgtrainprops/parts/headlights/headlight_singlebeam_plate.mdl")
+holoAng(A, entity():toWorld(ang(0,0,0)) )
+holoScale(A, vec(1))
+holoColor(A,Color)
+holoParent(2,1)
+holoAlpha(A,D)
+A++ 
+holoCreate(A)
+holoPos(A,entity():toWorld(vec(-10,-23,1)))
+holoParent(A, entity())
+holoModel(A, "models/gsgtrainprops/parts/headlights/headlight_singlebeam_plate.mdl")
+holoAng(A, entity():toWorld(ang(0,0,0)) )
+holoScale(A, vec(1))
+holoColor(A,Color)
+holoParent(2,1)
+holoAlpha(A,D)
+}
+
