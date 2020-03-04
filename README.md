@@ -1,24 +1,18 @@
 # front-detail-E2-pack
 So you decided to look at this
 
-so far we only have front plows for EMD locomotives
-
 (THIS IS NOT FOR STEAM LOCOMOTIVES!)
 
-ALCo detail units coming soon
+current lineup: 
+Emd : V1.0.6
+Fairbanks Morse: V1.1.0
+Alco: V1.2.0 - Beta
+GE: V1.3.0 (coming soon)
 
-we have Strike plate, foot board, large/regular plow, and ditchlight and ditchlightless versons of the E2
+How to use:
+Place E2 where the anticlimber is (aka the top of the pilot) and get the E2 to your liking.
 
-First put the folder above into your adv dupe 2 folder
-
-Then load gmod and place down the dupe
-(the E2's are in the dupe)
-
-if your having troubles of where to put the E2 on the locomotive take a look at the Demonstrator
-
-if you feel like it you can make a folder with the plows in it
+How to install
 
 
-
-(where the hell do you find good pictures for ALCo locos)
-
+хфтуивхуоццтуо
