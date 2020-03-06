@@ -104,7 +104,7 @@ if(first()){
     if(Hose > 4) { I = 0 }
     if(Hose < 3) { I = 0 }
 
-    A = 0
+    A = 1
     holoCreate(A)
     holoParent(A, entity())
     holoAng(A, entity():toWorld(ang(180,-90,90)) )
@@ -115,7 +115,7 @@ if(first()){
     holoColor(A,Color)
     holoAlpha(A , F)
 
-    A = 1
+    A = 2
     holoCreate(A)
     holoParent(A, entity())
     holoAng(A, entity():toWorld(ang(-90,0,0)) )
@@ -126,7 +126,7 @@ if(first()){
     holoColor(A,vec(255) )
     holoAlpha(A , H)
 
-    A = 2
+    A = 3
     holoCreate(A)
     holoParent(A, entity())
     holoAng(A, entity():toWorld(ang(-90,0,0)) )
@@ -136,7 +136,7 @@ if(first()){
     holoColor(A,vec(255) )
     holoBodygroup(A,1,B)
 
-    A = 3
+    A = 4
     holoCreate(A)
     holoParent(A, entity())
     holoAng(A, entity():toWorld(ang(-90,0,0)) )
@@ -146,7 +146,7 @@ if(first()){
     holoColor(A,vec(255) )
     holoBodygroup(A,1,B)
 
-    A = 4
+    A = 5
     holoCreate(A)
     holoParent(A, entity())
     holoAng(A, entity():toWorld(ang(-90,0,0)) )
@@ -156,7 +156,7 @@ if(first()){
     holoColor(A,vec(255) )
     holoEntity(A):setSubMaterial(1,Mat) 
 
-    A = 5
+    A = 6
     holoCreate(A)
     holoPos(A,entity():toWorld(vec(10+C,0,0)))
     holoParent(A, entity())
