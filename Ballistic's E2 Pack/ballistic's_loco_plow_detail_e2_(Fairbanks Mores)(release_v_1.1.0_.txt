@@ -1,129 +1,170 @@
-@name Ballistic's Loco Plow Detail E2 (Fairbanks Morse)(Release V 1.1.0) 
-#Because people are lazy
+@name Ballistic's Loco Plow Detail E2 (Fairbanks Morse)
 @inputs 
 @outputs 
 @persist 
-@trigger 
-#------ Plow Stuffs
-Color = vec(255) #Color of plow
-Color2 = vec(255) #Color of coupler cut bar grabs
+@trigger none
 
-Material = "models/proppertextures/enamel_black" #Material of plow
-Material2 = "models/proppertextures/acrylic_gold" #Material of coupler cut bar 
+if(dupefinished() | duped()){ reset() }
+if(first()){ 
 
-MuDoors = 1 #0 = Closed, 1 = Open, 2 = None
-StreamlinedDoors = 0 #0 = None, 1 = Closed, 2 = Open
+#------ Plow Config
 
-CutBar = 1# The Type of Cut Bar You Want to Have. 
-Ditchlights = 0 #0 = No Ditchlights, 1 = No
+    Color = vec(255) #Color of plow
+    Color2 = vec(255) #Color of coupler cut bar grabs
 
-PlowType = 1 #0 = No, 1 = Foot Board, 2 = No
-Coupler = 0 #0 = No Coupler, 1 = Fake Real Coupler
+    Material = "models/proppertextures/enamel_black" #Material of plow
+    Material2 = "models/proppertextures/acrylic_gold" #Material of coupler cut bar 
 
-Hose = 3 #The Ammount of hoses ya want
-Mu = 0 #0 = Yes I want MU's 1 = Nah fam no MU for you
+    MuDoors = 1 #0 = Closed, 1 = Open, 2 = None
+    StreamlinedDoors = 0 #0 = None, 1 = Closed, 2 = Open
 
-#[
+    CutBar = 1# The Type of Cut Bar You Want to Have. 
+    Ditchlights = 0 #0 = No Ditchlights, 1 = No
 
+    PlowType = 1 #0 = No, 1 = Foot Board, 2 = No
+    Coupler = 0 #0 = No Coupler, 1 = Fake Real Coupler
+
+    Hose = 3 #The Ammount of hoses ya want
+    Mu = 0 #0 = Yes I want MU's 1 = Nah fam no MU for you
+
+    #[
     Made by Ballistic Studios
     Edited by Calnesk Kerman Becase the Plow was Stupid high
     Also props to Kenny (RedStone) For making the origonal coupler cut bar and air hose setup
-]#
+    
+    DO NOT MESS WITH ANYTHING BEYOND THIS POINT
 
+    Unless your Kiwi Master then it's cool
+    [hi, im currently editing your code -titus]
+    ]#
 
-#[ 
+    Mat = Material
+    Mat2 = Material2
+    C = -1
+    CB = CutBar
 
-DO NOT MESS WITH ANYTHING BEYOND THIS POINT
+    if(PlowType <= 1) {
+        MuDoors = 0
+    }
+    else{
+        MuDoors = MuDoors
+    }
+    
+    if(Mu != 1){
+        switch(MuDoors){
+            case 0,
+                B = 2
+            break
+            case 1,
+                B = 1
+            break
+            case 2,
+                B = 1
+            break
+        }
+    }
+    elseif(Mu == 1){
+        B = 3
+    }
 
-Unless your Kiwi Master then it's cool
+    if(Ditchlights == 1) {
+        D = 255
+    }
+    else{
+        D = 0
+    }
+    
+    switch(PlowType){
+        case 0,
+            E = 255
+            F = 0
+            G = 0
+        break
+        case 1,
+            E = 0
+            F = 255
+            G = 0
+        break
+        case 2,
+            E = 0
+            F = 0
+            G = 255
+        break
+    }
+    
+    if(Coupler == 1) {
+        H = 255
+    }
+    else{
+        H = 0
+    }
 
-]#
+    if(Hose == 3) { I = 3 }
+    if(Hose == 4) { I = 4 }
+    if(Hose > 4) { I = 0 }
+    if(Hose < 3) { I = 0 }
 
-if(first() | duped()){
-if(PlowType <= 1) {MuDoors = 0}
-else{MuDoors = MuDoors}
-if(MuDoors == 0) {B = 2}
-if(MuDoors == 1) {B = 1}
-if(MuDoors == 2) {B = 1}
-if(Mu == 1) {B = 3}
-if(Ditchlights == 1) {D = 255}
-else{D = 0}
-Mat = Material
-Mat2 = Material2
-C = -1
-if(PlowType == 0) {E = 255}
-else{E = 0}
-if(PlowType == 1) {F = 255}
-else{F = 0}
-if(PlowType == 2) {G = 255}
-else{G = 0}
-if(Coupler == 1) {H = 255}
-else{H = 0}
-CB = CutBar
-if(Hose == 3) {I = 3}
-if(Hose == 4) {I = 4}
-if(Hose > 4) {I = 0}
-if(Hose < 3) {I = 0}
+    A = 0
+    holoCreate(A)
+    holoParent(A, entity())
+    holoAng(A, entity():toWorld(ang(180,-90,90)) )
+    holoModel(A, "models/monkatraztrainprops/parts/fm_footboards_switcher_early.mdl")
+    holoEntity(A):setSubMaterial(1,Mat)
+    holoPos(A,entity():toWorld(vec(35,0,7)))
+    holoScale(A, vec(1,1.2,1))
+    holoColor(A,Color)
+    holoAlpha(A , F)
 
+    A = 1
+    holoCreate(A)
+    holoParent(A, entity())
+    holoAng(A, entity():toWorld(ang(-90,0,0)) )
+    holoModel(A, "models/gsgtrainprops/parts/couplers/type_e_coupler.mdl")
+    holoMaterial(A,"models/proppertextures/enamel_black")
+    holoPos(A,entity():toWorld(vec(30,0.1,14)))
+    holoScale(A, vec(1))
+    holoColor(A,vec(255) )
+    holoAlpha(A , H)
 
+    A = 2
+    holoCreate(A)
+    holoParent(A, entity())
+    holoAng(A, entity():toWorld(ang(-90,0,0)) )
+    holoModel(A, "models/lazpack/detail/mu_"+ I +"hose_right.mdl")
+    holoPos(A,entity():toWorld(vec(13,-32,2)))
+    holoScale(A, vec(1))
+    holoColor(A,vec(255) )
+    holoBodygroup(A,1,B)
 
-A = 0
-holoCreate(A)
-holoParent(A, entity())
-holoAng(A, entity():toWorld(ang(180,-90,90)) )
-holoModel(A, "models/monkatraztrainprops/parts/fm_footboards_switcher_early.mdl")
-holoEntity(A):setSubMaterial(1,Mat)
-holoPos(A,entity():toWorld(vec(35,0,7)))
-holoScale(A, vec(1,1.2,1))
-holoColor(A,Color)
-holoAlpha(A , F)
-A++
-holoCreate(A)
-holoParent(A, entity())
-holoAng(A, entity():toWorld(ang(-90,0,0)) )
-holoModel(A, "models/gsgtrainprops/parts/couplers/type_e_coupler.mdl")
-holoMaterial(A,"models/proppertextures/enamel_black")
-holoPos(A,entity():toWorld(vec(30,0.1,14)))
-holoScale(A, vec(1))
-holoColor(A,vec(255) )
-holoAlpha(A , H)
-A++
-holoCreate(A)
-holoParent(A, entity())
-holoAng(A, entity():toWorld(ang(-90,0,0)) )
-holoModel(A, "models/lazpack/detail/mu_"+ I +"hose_right.mdl")
-holoPos(A,entity():toWorld(vec(13,-32,2)))
-holoScale(A, vec(1))
-holoColor(A,vec(255) )
-holoBodygroup(A,1,B)
-A++
-holoCreate(A)
-holoParent(A, entity())
-holoAng(A, entity():toWorld(ang(-90,0,0)) )
-holoModel(A, "models/lazpack/detail/mu_"+ I +"hose_left.mdl")
-holoPos(A,entity():toWorld(vec(13,32,2)))
-holoScale(A, vec(1))
-holoColor(A,vec(255) )
-holoBodygroup(A,1,B)
-A++
-holoCreate(A)
-holoParent(A, entity())
-holoAng(A, entity():toWorld(ang(-90,0,0)) )
-holoModel(A, "models/lazpack/detail/brakehose_offset.mdl")
-holoPos(A,entity():toWorld(vec(20,15,2)))
-holoScale(A, vec(1))
-holoColor(A,vec(255) )
-holoEntity(A):setSubMaterial(1,Mat) 
-A++ 
-holoCreate(A)
-holoPos(A,entity():toWorld(vec(10+C,0,0)))
-holoParent(A, entity())
-holoModel(A, "models/anytrains/props/detail/cutbar.mdl")
-holoAng(A, entity():toWorld(ang(90,180,0)) )
-holoMaterial(A, (""))
-holoColor(A,Color)
-holoParent(2,1)
-holoEntity(A):setSubMaterial(5,Mat2) 
-holoBodygroup(A,2,CB)
+    A = 3
+    holoCreate(A)
+    holoParent(A, entity())
+    holoAng(A, entity():toWorld(ang(-90,0,0)) )
+    holoModel(A, "models/lazpack/detail/mu_"+ I +"hose_left.mdl")
+    holoPos(A,entity():toWorld(vec(13,32,2)))
+    holoScale(A, vec(1))
+    holoColor(A,vec(255) )
+    holoBodygroup(A,1,B)
+
+    A = 4
+    holoCreate(A)
+    holoParent(A, entity())
+    holoAng(A, entity():toWorld(ang(-90,0,0)) )
+    holoModel(A, "models/lazpack/detail/brakehose_offset.mdl")
+    holoPos(A,entity():toWorld(vec(20,15,2)))
+    holoScale(A, vec(1))
+    holoColor(A,vec(255) )
+    holoEntity(A):setSubMaterial(1,Mat) 
+
+    A = 5
+    holoCreate(A)
+    holoPos(A,entity():toWorld(vec(10+C,0,0)))
+    holoParent(A, entity())
+    holoModel(A, "models/anytrains/props/detail/cutbar.mdl")
+    holoAng(A, entity():toWorld(ang(90,180,0)) )
+    holoMaterial(A, (""))
+    holoColor(A,Color)
+    holoParent(2,1)
+    holoEntity(A):setSubMaterial(5,Mat2) 
+    holoBodygroup(A,2,CB)
 }
-
