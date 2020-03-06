@@ -28,11 +28,11 @@ if(first()){
     Mu = 0 #0 = Yes I want MU's 1 = Nah fam no MU for you
 
     #[
-    Made by Ballistic Studios
-    Edited by Calnesk Kerman Becase the Plow was Stupid high
-    Also props to Kenny (RedStone) For making the origonal coupler cut bar and air hose setup
+     - Made by Ballistic Studios
+     - Edited by Calnesk Kerman Becase the Plow was Stupid high
+     - Also props to Kenny (RedStone) For making the original coupler cut bar, and air hose setup.
     
-    DO NOT MESS WITH ANYTHING BEYOND THIS POINT
+    *** DO NOT MESS WITH ANYTHING BEYOND THIS POINT ***
 
     Unless your Kiwi Master then it's cool
     [hi, im currently editing your code -titus]
