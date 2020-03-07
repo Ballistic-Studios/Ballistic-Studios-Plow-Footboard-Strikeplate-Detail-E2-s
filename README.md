@@ -6,7 +6,7 @@ So you decided to look at this
 current lineup: 
 Emd : V1.0.7
 Fairbanks Morse: V1.1.0
-Alco: V1.2.0 - Beta
+Alco: V1.2.0 
 GE: V1.3.0 (coming soon)
 
 How to use:
