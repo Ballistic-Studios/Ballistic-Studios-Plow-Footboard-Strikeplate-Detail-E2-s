@@ -18,9 +18,9 @@ StreamlinedDoors = 1 #0 = None, 1 = Closed, 2 = Open
 CutBar = 5# The Type of Cut Bar You Want to Have. Even Numers Only
 Ditchlights = 1 #0 = No Ditchlights, 1 = Ditchlights
 DitchlightType = 1 #0 = Squared Ditchlights 1 = Round Ditchlights 2 = Round Small Ditchlights
-DitchlightX = 0 #bruh
-DitchlightY = 0 #bruh
-DitchlightZ = 0  #bruh
+DitchlightX = 0 #Ditchlight Pos X
+DitchlightY = 0 #Ditchlgith Pos Y
+DitchlightZ = 0  #Ditchlight Pos Z
 
 PlowType = 2 #0 = Strike Plate, 1 = Foot Board, 2 = Plow
 Coupler = 0 #0 = No Coupler, 1 = Fake Real Coupler
