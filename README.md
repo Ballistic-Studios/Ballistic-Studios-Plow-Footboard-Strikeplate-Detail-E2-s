@@ -1,10 +1,10 @@
-# front-detail-E2-pack
+Ballistic's plow detail E2 pack
 So you decided to look at this
 
 (THIS IS NOT FOR STEAM LOCOMOTIVES!)
 
 current lineup: 
-Emd : V1.0.7
+Emd : V1.0.8
 Fairbanks Morse: V1.1.0
 Alco: V1.2.0 
 GE: V1.3.0 (coming soon)
