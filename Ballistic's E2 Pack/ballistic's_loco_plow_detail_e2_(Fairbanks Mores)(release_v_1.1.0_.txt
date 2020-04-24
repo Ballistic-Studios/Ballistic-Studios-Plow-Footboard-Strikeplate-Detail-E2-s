@@ -1,7 +1,5 @@
-@name vibe check
+@name oops
 @inputs 
 @outputs 
 @persist 
-@trigger none
-
-print("vibe check")
+@trigger 
