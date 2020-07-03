@@ -3,16 +3,6 @@ So you decided to look at this
 
 (THIS IS NOT FOR STEAM LOCOMOTIVES!)
 
-current lineup: 
-Emd : V1.0.9
-Fairbanks Morse: V1.1.0
-Alco: V1.2.0 
-GE: V1.3.0 (coming soon)
+How to instal: Download the pack, remove the readme (this) and place the folder into ADV DUPE2
 
-How to use:
-Place E2 where the anticlimber is (aka the top of the pilot) and get the E2 to your liking.
-
-How to install
-
-
-хфтуивхуоццтуо
+Current Verson 1.0.9 1/2
